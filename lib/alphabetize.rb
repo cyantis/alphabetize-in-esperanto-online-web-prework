@@ -1,7 +1,4 @@
-require 'pry'
-
 def alphabetize(arr)
-  binding.pry
   e_alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
-  arr.sort_by {|a| a}
+  arr.sort_by {|a| a.split("").collect |c| e_alphabet.index(c)}
 end
